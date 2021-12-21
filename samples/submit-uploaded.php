@@ -20,7 +20,7 @@ $serviceFaxout = new \byfax\ApiServiceFaxoutSoapClient($apiKey, $apiSecret, $api
 // Create api-request object and fill it
 $submitRequest = new \byfax\model\request\faxout\ApiRequestFaxjobSubmit();
 
-$submitRequest->broadcastRef = "myBroadcast-ref-1"; // Set a unique broadcast REF-ID. Create a new one for each single-send
+//$submitRequest->broadcastRef = md5("my-broadcast-ref" . microtime(true)); // Unique broadcast reference-ID. Uncomment this line to set at your side otherwise API will generate.
 $submitRequest->Header = "<DateTime> <Timezone>|От: <From> Кому: <To>|Страница <CurPage> из <CurPages>";
 $submitRequest->busyRetry = 3;
 $submitRequest->sendQuality = \byfax\enum\FaxQuality::STANDARD; // Available STANDARD and FINE
@@ -30,12 +30,12 @@ $submitRequest->sendMode = \byfax\enum\FaxMode::PHOTO;
 $submitRequest->Sender = new \byfax\model\entity\common\FaxContact();
 $submitRequest->Sender->Name = "My sender name";
 $submitRequest->Sender->Company = "My sender company";
-$submitRequest->Sender->Number = "+375 29 6506509";
+$submitRequest->Sender->Number = "+375 29 1111111";
 $submitRequest->Sender->Timezone = "Europe/Minsk";
 
 // Recipient object is required. Number should be always set in E164 format
 $submitRecipient = new \byfax\model\entity\common\FaxRecipient();
-$submitRecipient->messageRef = "myFaxMessage-ref-1"; // Set a unique message REF-ID to be able to check state
+//$submitRecipient->messageRef = md5("my-message-ref" . microtime(true));  // Unique message reference-ID. Uncomment this line to set at your side otherwise API will generate.
 $submitRecipient->Name = "Recipient name";
 $submitRecipient->Number = "+375173361209";
 
