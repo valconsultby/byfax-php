@@ -2,7 +2,7 @@ PRODUCT
 -------------------
 
 byFax is an online faxing platform that allows you to send and receive faxes without fax machines or any other devices directly in your browser or through the API integration presented here.
-More information about the platform and its abilities can be found on the <a href="https://byfax.by">byFax</a> website (https://byfax.by).
+More information about the platform and its abilities can be found on the <a href="https://byfax.biz">byFax</a> website (https://byfax.biz).
 
 DIRECTORY STRUCTURE
 -------------------
