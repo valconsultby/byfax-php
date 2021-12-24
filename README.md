@@ -28,7 +28,9 @@ INSTALLATION
 
 The preferred way to install this extension is through composer:
 
+```php
 php composer.phar require --prefer-dist valconsultby/byfax-php
+```
 
 
 SERVICES
