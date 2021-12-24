@@ -18,6 +18,19 @@ REQUIREMENTS
 The minimum requirement by this project that your Web server supports PHP 7.0.0.
 
 
+STATUS
+------------
+[![https://packagist.org/packages/valconsultby/byfax-php](https://poser.pugx.org/valconsultby/byfax-php/v/stable.svg)](https://packagist.org/packages/valconsultby/byfax-php)
+
+
+INSTALLATION
+------------
+
+The preferred way to install this extension is through composer:
+
+php composer.phar require --prefer-dist valconsultby/byfax-php
+
+
 SERVICES
 ------------
 
