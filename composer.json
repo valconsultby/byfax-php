@@ -1,0 +1,26 @@
+{
+    "name": "valconsultby/byfax-php",
+    "description": "byFax public API SDK for PHP",
+    "type": "library",
+    "keywords": ["byfax", "php", "sdk", "fax", "api"],
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "ValConsultBy PUE",
+            "email": "contact@pamconsult.by"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/valconsultby/byfax-php/issues",
+        "source": "https://github.com/valconsultby/byfax-php"
+    },
+    "require": {
+        "php": ">=5.6.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "byfax\\": "src"
+        }
+    }
+}

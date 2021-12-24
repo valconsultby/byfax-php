@@ -1,13 +1,5 @@
 <?php
 
-
-// Sample autoload function for stand-alone SDK sample
-function __autoload($class)
-{
-    $path = __DIR__ . DIRECTORY_SEPARATOR . str_ireplace("\\", DIRECTORY_SEPARATOR, $class) . '.php';
-    require $path;
-}
-
 $filePath = __DIR__  . "/test-file/byFax img 1.png";
 
 $apiKey = "YOUR-API-KEY";
