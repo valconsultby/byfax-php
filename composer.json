@@ -18,7 +18,8 @@
     "require": {
         "php": ">=7.0.0"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
+    "prefer-stable" : true,
     "autoload": {
         "psr-4": {
             "byfax\\": "src"
