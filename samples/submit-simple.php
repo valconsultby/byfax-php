@@ -12,7 +12,12 @@ $serviceFaxout = new \byfax\ApiServiceFaxoutSoapClient($apiKey, $apiSecret, $api
 // Create api-request object and fill it
 $submitRequest = new \byfax\model\request\faxout\ApiRequestFaxjobSubmit();
 
-//$submitRequest->broadcastRef = md5("my-broadcast-ref" . microtime(true)); // Unique broadcast reference-ID. Uncomment this line to set at your side otherwise API will generate.
+// Submission broadcast refID.
+// Unique within your API account
+// Should be unique for each submission
+// Uncomment this line to set at your side otherwise API will generate.
+// $submitRequest->broadcastRef = md5("my-broadcast-ref" . microtime(true));
+
 $submitRequest->Header = "<DateTime> <Timezone>|От: <From> Кому: <To>|Страница <CurPage> из <CurPages>";
 $submitRequest->busyRetry = 3;
 $submitRequest->sendQuality = \byfax\enum\FaxQuality::STANDARD; // Available STANDARD and FINE
@@ -27,8 +32,13 @@ $submitRequest->Sender->Timezone = "Europe/Minsk";
 
 // Recipient object is required. Number should be always set in E164 format
 $submitRecipient = new \byfax\model\entity\common\FaxRecipient();
-//$submitRecipient->messageRef = md5("my-message-ref" . microtime(true));  // Unique message reference-ID. Uncomment this line to set at your side otherwise API will generate.
+
+// Unique message reference-ID.
+// Uncomment this line to set at your side otherwise API will generate.
+// $submitRecipient->messageRef = md5("my-message-ref" . microtime(true));
+
 $submitRecipient->Name = "Recipient name";
+$submitRecipient->Company = "Recipient company";
 $submitRecipient->Number = "+375173361209";
 
 $submitRequest->Recipients[] = $submitRecipient;
